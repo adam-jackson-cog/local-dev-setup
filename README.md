@@ -7,11 +7,11 @@ This repository contains essential setup scripts and guides for establishing a c
 ### `/mcp` - Model Context Protocol Setup
 Contains setup scripts and documentation for integrating multiple MCP servers with VS Code:
 
-#### BiomCP (Biomedical Research)
+#### BioMCP (Biomedical Research)
 - **`biomcp-setup-guide.md`** - Comprehensive guide for setting up BiomCP MCP server in VS Code
 - **`setup-biomcp.sh`** - Automated setup script for BiomCP installation and configuration
 
-**What BiomCP provides:**
+**What BioMCP provides:**
 - Direct access to biomedical research tools within VS Code
 - Integration with PubMed, ClinicalTrials.gov, and genetic variant databases
 - Support for research queries through VS Code chat interface
