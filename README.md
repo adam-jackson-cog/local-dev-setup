@@ -1,5 +1,7 @@
 # Local Development Setup for Cog Moment Tech Team
 
+> **⚠️ Platform Compatibility Notice:** These setup scripts are currently for **macOS environments only**. Windows script creation is currently underway and will be available in a future release.
+
 This repository contains essential setup scripts and guides for establishing a complete local development environment for Cognizant Moment tech team members. The setup is designed to work in corporate environments where admin privileges may not be available.
 
 ## 📁 Repository Structure
@@ -137,6 +139,15 @@ After running the setup scripts, you'll have:
 - **VS Code** installed
 - **Internet connection** for downloading packages
 - **Basic terminal access** (admin privileges not required)
+- **GitHub Copilot License** (see Enterprise License section below)
+
+## 🏢 Obtaining Enterprise GitHub Copilot License
+
+### For Cognizant Team Members
+
+To access GitHub Copilot through your Cognizant enterprise account, you'll need to request a license through the official software asset request process.
+
+For immediate assistance with license requests, contact your local IT support or development team lead.
 
 ### Examples
 ```bash
