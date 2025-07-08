@@ -13,6 +13,7 @@ show_usage() {
     echo "  Installs GitHub Copilot configuration files (chat modes, prompts, workflows)"
     echo "  to the specified project directory by creating a .github folder and copying"
     echo "  the subdirectories from the current github-copilot folder (excluding this script)."
+    echo "  The target directory will be created automatically if it doesn't exist."
     echo ""
     echo "Arguments:"
     echo "  project_directory    Target directory where .github folder will be created"
@@ -66,14 +67,33 @@ fi
 # Expand tilde in project directory path
 PROJECT_DIR="${PROJECT_DIR/#\~/$HOME}"
 
-# Convert relative path to absolute path
-PROJECT_DIR="$(cd "$PROJECT_DIR" 2>/dev/null && pwd || echo "$PROJECT_DIR")"
+# Convert relative path to absolute path (if directory exists)
+if [ -d "$PROJECT_DIR" ]; then
+    PROJECT_DIR="$(cd "$PROJECT_DIR" && pwd)"
+else
+    # If directory doesn't exist, resolve the absolute path manually
+    if [[ "$PROJECT_DIR" = /* ]]; then
+        # Already absolute path
+        PROJECT_DIR="$PROJECT_DIR"
+    else
+        # Relative path - make it absolute
+        PROJECT_DIR="$(pwd)/$PROJECT_DIR"
+    fi
+fi
 
-# Check if project directory exists
+# Create project directory if it doesn't exist
 if [ ! -d "$PROJECT_DIR" ]; then
-    echo "❌ Error: Project directory does not exist: $PROJECT_DIR"
-    echo "   Please create the directory first or provide a valid path."
-    exit 1
+    echo "📁 Creating target directory: $PROJECT_DIR"
+    mkdir -p "$PROJECT_DIR"
+    if [ $? -eq 0 ]; then
+        echo "✅ Successfully created: $PROJECT_DIR"
+    else
+        echo "❌ Error: Failed to create directory: $PROJECT_DIR"
+        echo "   Please check permissions or provide a valid path."
+        exit 1
+    fi
+else
+    echo "📁 Using existing directory: $PROJECT_DIR"
 fi
 
 # Define target .github directory

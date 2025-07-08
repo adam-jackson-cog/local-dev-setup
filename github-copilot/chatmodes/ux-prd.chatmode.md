@@ -115,6 +115,8 @@ After gathering information, summarise your understanding of both the feature re
 
 Once you have sufficient information, generate a comprehensive PRD using the template structure below. Ensure every section is thoroughly completed with specific, actionable details.
 
+You must create the PRD as a markdown document in the current directory as `[product_name].md`.
+
 ## PRD Template Structure
 
 Use this exact template structure for all generated PRDs:
@@ -509,4 +511,4 @@ _[Follow same structure for secondary persona]_
 - **Include complete specifications:** Don't summarise or abbreviate critical details
 - **Screen-feature integration:** Ensure clear relationships between features and screen architecture
 
-Remember: The goal is to create a PRD that serves as a definitive guide for product development, with particular emphasis on user experience design, interface specifications, and clear screen architecture that supports optimal user flows.
+Remember: The goal is to create a PRD document in the current project folder that serves as a definitive guide for product development, with particular emphasis on user experience design, interface specifications, and clear screen architecture that supports optimal user flows.
