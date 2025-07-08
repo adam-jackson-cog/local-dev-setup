@@ -1,4 +1,4 @@
-# Local Development Setup for Cognizant Moment Tech Team
+# Local Development Setup for Cog Moment Tech Team
 
 This repository contains essential setup scripts and guides for establishing a complete local development environment for Cognizant Moment tech team members. The setup is designed to work in corporate environments where admin privileges may not be available.
 
@@ -8,8 +8,6 @@ This repository contains essential setup scripts and guides for establishing a c
 Contains setup scripts and documentation for integrating multiple MCP servers with VS Code:
 
 #### BioMCP (Biomedical Research)
-- **`biomcp-setup-guide.md`** - Comprehensive guide for setting up BiomCP MCP server in VS Code
-- **`setup-biomcp.sh`** - Automated setup script for BiomCP installation and configuration
 
 **What BioMCP provides:**
 - Direct access to biomedical research tools within VS Code
@@ -18,8 +16,6 @@ Contains setup scripts and documentation for integrating multiple MCP servers wi
 - Automated installation of required Python packages (uv, biomcp-python)
 
 #### Context7 (Documentation Access)
-- **`context7-setup-guide.md`** - Comprehensive guide for setting up Context7 MCP server in VS Code
-- **`setup-context7.sh`** - Automated setup script for Context7 installation and configuration
 
 **What Context7 provides:**
 - Up-to-date documentation for thousands of libraries directly in VS Code
@@ -28,8 +24,6 @@ Contains setup scripts and documentation for integrating multiple MCP servers wi
 - Support for React, Next.js, MongoDB, and many other libraries
 
 #### Sequential Thinking (Problem Solving)
-- **`sequential-thinking-setup-guide.md`** - Comprehensive guide for setting up Sequential Thinking MCP server in VS Code
-- **`setup-sequential-thinking.sh`** - Automated setup script for Sequential Thinking installation and configuration
 
 **What Sequential Thinking provides:**
 - Structured problem-solving and analytical thinking capabilities
@@ -37,7 +31,7 @@ Contains setup scripts and documentation for integrating multiple MCP servers wi
 - Hypothesis generation and verification workflows
 - Complex debugging and architecture decision support
 
-### `/scripts` - Core Development Tools
+### `/scripts` - Core Development Tools + MCP Tools
 Contains automated setup scripts for essential development tools and environment configuration:
 
 #### `/scripts/core-libraries/`
@@ -144,61 +138,6 @@ After running the setup scripts, you'll have:
 - **Internet connection** for downloading packages
 - **Basic terminal access** (admin privileges not required)
 
-## 🛠️ Individual Tool Setup
-
-If you prefer to set up specific tools individually:
-
-### Core Development Environment
-```bash
-./scripts/core-libraries/setup-dev-environment.sh
-```
-
-### MCP Tools for VS Code Enhancement
-
-#### BiomCP for Biomedical Research
-```bash
-./mcp/setup-biomcp.sh
-```
-
-#### Context7 for Library Documentation
-```bash
-./mcp/setup-context7.sh
-```
-
-#### Sequential Thinking for Problem Solving
-```bash
-./mcp/setup-sequential-thinking.sh
-```
-
-### GitHub Copilot Custom Configurations
-```bash
-# Install to a specific project
-./github-copilot/install-copilot-chat.sh ~/path/to/your/project
-
-# Install to current directory
-./github-copilot/install-copilot-chat.sh .
-```
-
-## 🎯 GitHub Copilot Enhancement
-
-The `/github-copilot` directory contains powerful enhancements for your GitHub Copilot experience. Use the install script to add custom configurations to any project:
-
-### Installation
-```bash
-cd github-copilot
-./install-copilot-chat.sh <target-project-directory>
-```
-
-### What Gets Installed
-The script creates a `.github` directory in your target project with:
-
-- **`chatmodes/`** - Custom conversation modes for specialized workflows
-  - UX/PRD mode for user experience and product requirement discussions
-- **`prompts/`** - Reusable prompt templates for consistent development practices
-  - Structured prompts for common development scenarios
-- **`workflows/`** - Pre-configured GitHub Actions and automation templates
-  - Ready-to-use CI/CD configurations
-
 ### Examples
 ```bash
 # Install to a React project
@@ -210,12 +149,6 @@ The script creates a `.github` directory in your target project with:
 # Install to a specific project path
 ./install-copilot-chat.sh /Users/username/projects/sanofi-test
 ```
-
-### Benefits
-- **Consistent Development Practices:** Standardized prompts and workflows across projects
-- **Enhanced Copilot Conversations:** Specialized chat modes for different development contexts
-- **Rapid Project Setup:** Pre-configured GitHub Actions and automation
-- **Team Collaboration:** Shared configurations for consistent team workflows
 
 ## 📖 Documentation
 
